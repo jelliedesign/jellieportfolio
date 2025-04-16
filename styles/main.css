@@ -1,0 +1,608 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* CSS Document */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Red Hat Display", serif;
+    background-color: #d9eff8;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    width: 100%;
+}
+
+main {
+    min-height: 650px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+h3 {
+    font-weight: 800;
+}
+
+p {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*==================
+NAV
+===================*/
+
+/* Tightened Navigation Objects */
+.nav {
+    display: flex;
+    width: 100%;
+    height: 60px; /* Reduced height */
+    margin-top: 0;
+    margin-bottom: 20px;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.nav img {
+    width: 180px;
+    height: auto;
+    margin: 0;
+}
+
+/* Navigation links container */
+.nav-links {
+    display: flex;
+    gap: 12px; /* Tight spacing between nav items */
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.link {
+    display: inline-block;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.navlink {
+    margin: 0; /* Remove all margins */
+    padding: 0 5px; /* Small horizontal padding */
+    font-size: 20px;
+    font-weight: 800;
+    display: inline-block;
+    height: 100%;
+    line-height: 60px; /* Match the nav height */
+}
+
+/* Mobile styling */
+@media (max-width: 768px) {
+    .nav {
+        height: auto;
+        padding: 10px 0;
+        flex-direction: column;
+    }
+    
+    .nav img {
+        margin-bottom: 8px;
+    }
+    
+    .nav-links {
+        justify-content: center;
+        gap: 8px;
+    }
+    
+    .navlink {
+        font-size: 16px;
+        line-height: normal;
+        padding: 5px;
+    }
+}
+/*==================
+ABOUT
+===================*/
+.about-section {
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.about-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+}
+
+.profile-img {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-img img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about-text {
+    flex: 2;
+}
+
+.bio {
+    margin-bottom: 30px;
+}
+
+.skills {
+    margin-bottom: 30px;
+}
+
+.skills h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background-color: #0099cc;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.connect {
+    margin-top: 40px;
+}
+
+.connect h3 {
+    margin-bottom: 15px;
+}
+
+/* Mobile about section */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 30px 15px;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .about-section h1 {
+        font-size: 28px;
+    }
+    
+    .subtitle {
+        font-size: 16px;
+    }
+}
+
+/*==================
+CONTACT US
+===================*/
+
+.contact {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contact h1 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+    font-style: italic;
+    font-family: Arial, sans-serif;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5bb9e1;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #26a9e0;
+}
+
+/* Mobile contact form */
+@media (max-width: 768px) {
+    .contact {
+        margin: 30px 15px;
+        padding: 15px;
+        width: calc(100% - 30px);
+    }
+}
+
+/* Main content */
+.portfolio-section {
+    width: 100%;
+    margin: 2rem 0;
+    padding: 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    padding: 0 5%;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 450px);
+    width: 100%;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Mobile portfolio grid */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 350px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Card styles */
+.card {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #888;
+    margin: 0;
+    padding: 0;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+    margin: 0;
+    padding: 0;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.4) 40%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    color: white;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.card:hover .card-overlay {
+    opacity: 1;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.card-description {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.card:hover .card-description {
+    max-height: 100px;
+    opacity: 1;
+}
+
+/* Touch device support for card descriptions */
+@media (hover: none) {
+    .card-description {
+        max-height: 100px;
+        opacity: 1;
+    }
+    
+    .card-overlay {
+        opacity: 1;
+    }
+}
+
+.card-link {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.card-link:hover {
+    border-color: white;
+}
+
+/* Mobile card styling */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1.3rem;
+    }
+    
+    .card-overlay {
+        padding: 1.5rem;
+    }
+}
+
+/*Project Cards*/
+.pintro {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.pcard {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.pcard-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d9eff8;
+    margin: 0;
+    padding: 0;
+}
+
+.pcard-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.5s ease;
+    margin: 0;
+    padding: 0;
+}
+
+.pcard:hover .pcard-image img {
+    transform: scale(1.05);
+}
+
+.pcard-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.4) 40%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    color: white;
+    opacity: 0.2;
+    transition: opacity 0.3s ease;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.pcard:hover .pcard-overlay {
+    opacity: 1;
+}
+
+/* Touch device support for project cards */
+@media (hover: none) {
+    .pcard-overlay {
+        opacity: 0.8;
+    }
+    
+    .pcard-description {
+        max-height: 100px;
+        opacity: 1;
+    }
+}
+
+.pcard-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.pcard-description {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.pcard:hover .pcard-description {
+    max-height: 100px;
+    opacity: 1;
+}
+
+.pend {
+    margin: 10px 0px 25px 50px;
+}
+
+/* Mobile project end section */
+@media (max-width: 768px) {
+    .pend {
+        margin: 10px 15px 25px 15px;
+    }
+    
+    .pcard-title {
+        font-size: 1.3rem;
+    }
+}
+
+.pend a:hover {
+    color: blue;
+}
+
+/*==================
+FOOTER
+===================*/
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 0px 0px 50px;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    background-color: black;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.footer a:hover {
+    color: aqua;
+}
+
+.footertxt {
+    color: white;
+}
+
+.footertxt p {
+    margin-top: 10px;
+}
+
+/* Mobile footer */
+@media (max-width: 768px) {
+    .footer {
+        padding: 25px 20px;
+    }
+}
+
+/* Fix for potential horizontal scrolling */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
